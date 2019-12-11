@@ -5,7 +5,7 @@ from ckeditor.fields import RichTextField
 class Article(models.Model):
     #models.CASCADE bağlı olunan auth.User tablosundaki  #user'ımız silinirse o user'a ait article'larında silinmesini sağlar
     author=models.ForeignKey("auth.User",on_delete=models.CASCADE,verbose_name="yazar")      
-    title=models.CharField(max_length=200,verbose_name="başlık")
+    title=models.CharField(max_length=250,verbose_name="başlık")
     content=RichTextField()
     created_date=models.DateTimeField(auto_now_add=True,verbose_name="Oluşturulma tarihi")
     article_image=models.FileField(blank=True,null=True,verbose_name="Makaleye fotoğraf ekleyin")
