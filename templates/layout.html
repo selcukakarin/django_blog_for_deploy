@@ -13,11 +13,13 @@
     {% include "includes/navbar.html" %}
     
     <div class="container" style="margin-top:5em; margin-bottom:5em;">
+    
     {% if messages %}
             {% for message in messages %}
             <div{% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
             {% endfor %}
     {% endif %}
+    <div class="alert alert-info">Bu proje Django ile yakın bir vakitte hayata geçmiştir. Ve geliştirmeler yazılımcısının zaman bulması ile devam edecektir.</div>
         {% block body %}
         
         {% endblock body %}
